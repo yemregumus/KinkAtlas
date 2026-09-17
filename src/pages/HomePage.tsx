@@ -1,6 +1,7 @@
 import { ArrowRight, Brain, Compass, HeartHandshake, LockKeyhole, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PrivacyNote } from "../components/PrivacyNote";
+import { CompletionCounter } from "../components/CompletionCounter";
 
 const pillars = [
   { icon: Compass, title: "Discover", text: "Find vocabulary for dynamics and experiences that may appeal—without having an identity assigned to you." },
@@ -27,13 +28,14 @@ export function HomePage() {
               How this works
             </a>
           </div>
-          <div className="trust-row">
-            <span>
-              <LockKeyhole size={15} />
-              No account
-            </span>
+          <div className="hero-trust">
+            <span>No account</span>
             <span>No answer storage</span>
             <span>18+ only</span>
+          </div>
+
+          <div className="hero-completion-count">
+            <CompletionCounter />
           </div>
         </div>
         <div className="atlas-preview" aria-label="Example of a kink map">

@@ -1,3 +1,18 @@
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+select,
+.share-dialog pre,
+.share-dialog textarea,
+.share-dialog input {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
 :root {
   color-scheme: dark;
   font-family:
@@ -402,17 +417,32 @@ p {
   gap: 0.8rem;
   margin: 2rem 0 1.5rem;
 }
-.trust-row {
+.hero-trust {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem 1.5rem;
   color: var(--dim);
   font-size: 0.78rem;
+  margin-top: 1.1rem;
 }
-.trust-row span {
+
+.hero-trust span {
   display: flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+.hero-completion-count {
+  margin-top: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-completion-count .completion-counter {
+  font-size: 0.9rem;
+  color: var(--muted);
+  opacity: 0.9;
 }
 .atlas-preview {
   aspect-ratio: 1;
