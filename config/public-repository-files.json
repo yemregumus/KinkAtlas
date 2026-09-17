@@ -9,7 +9,7 @@
   "docs/taxonomy.md",
   "index.html",
   "netlify.toml",
-  "netlify/functions/completion-count.ts",
+  "netlify/functions/completion-count.mts",
   "package-lock.json",
   "package.json",
   "public/__forms.html",
@@ -127,3 +127,4 @@
   "vite.config.ts",
   "vitest.public.config.ts"
 ]
+

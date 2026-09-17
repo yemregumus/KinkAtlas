@@ -10,7 +10,7 @@ vi.mock('@netlify/blobs', () => ({
   getStore: () => blobMocks,
 }))
 
-import handler from '../../netlify/functions/completion-count'
+import handler from '../../netlify/functions/completion-count.mjs'
 
 const functionUrl = 'https://kinkatlas.example/.netlify/functions/completion-count'
 
@@ -77,3 +77,4 @@ describe('completion-count Netlify Function', () => {
     expect(response.status).toBe(503)
   })
 })
+
