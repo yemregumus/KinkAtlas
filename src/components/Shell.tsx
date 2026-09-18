@@ -30,7 +30,6 @@ export function Shell() {
           </Link>
 
           <p>Discover your desires. Know your boundaries. Learn your language.</p>
-          <CompletionCounter />
         </div>
 
         <div className="footer-center">
