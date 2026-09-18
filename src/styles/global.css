@@ -439,11 +439,6 @@ p {
   justify-content: flex-start;
 }
 
-.hero-completion-count .completion-counter {
-  font-size: 0.9rem;
-  color: var(--muted);
-  opacity: 0.9;
-}
 .atlas-preview {
   aspect-ratio: 1;
   max-width: 450px;
@@ -1434,6 +1429,60 @@ p {
 .calculation-disclosure summary {
   cursor: pointer;
   font-weight: 750;
+}
+
+.completion-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 34rem;
+}
+
+.completion-counter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.completion-info-button {
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.completion-count-explanation {
+  margin-top: 0.75rem;
+  padding: 0.9rem 1rem;
+  max-width: 32rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .completion-counter {
+    width: 100%;
+    max-width: none;
+  }
+
+  .completion-count-explanation {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
 }
 .calculation-disclosure div {
   padding-top: 1rem;
@@ -2603,50 +2652,6 @@ summary:focus-visible {
   flex-direction: column;
   align-items: flex-start;
   justify-self: start;
-}
-
-.completion-counter {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-top: 0.8rem;
-  color: var(--muted);
-  font-size: 0.72rem;
-}
-
-.completion-counter > button {
-  width: 1.35rem;
-  height: 1.35rem;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  background: var(--surface-2);
-  color: var(--gold-soft);
-  cursor: pointer;
-  font: inherit;
-  font-weight: 800;
-}
-
-.completion-counter > button:focus-visible {
-  outline: 3px solid var(--gold);
-  outline-offset: 2px;
-}
-
-.completion-count-popover {
-  position: absolute;
-  z-index: 20;
-  bottom: calc(100% + 0.65rem);
-  left: 0;
-  width: min(320px, calc(100vw - 40px));
-  padding: 0.85rem;
-  border: 1px solid rgba(215, 168, 95, 0.32);
-  border-radius: 10px;
-  background: var(--surface-2);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  color: var(--muted);
-  font-size: 0.72rem;
-  line-height: 1.5;
 }
 
 .footer-center {
